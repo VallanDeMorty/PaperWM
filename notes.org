@@ -151,7 +151,7 @@ Another search path controls which libraries are available:
 Modules **can't** be reloaded, but writing to `imports.myModule.myVariable` works. Eg.
 #+BEGIN_SRC javascript
 // myModule
-var foo = 1;
+const foo = 1;
 function printFoo() {
   print(foo);
 }
@@ -163,8 +163,8 @@ After `imports.myModule.foo = 2`, `printFoo` will print 2. All users of the modu
 Refering to the module being loaded works:
 #+BEGIN_SRC javascript
 // myModule.js
-var currentModule = imports.myModule;
-var foo = 1;
+const currentModule = imports.myModule;
+const foo = 1;
 currentModule.foo = 2;
 print(foo); // prints 2
 #+END_SRC
